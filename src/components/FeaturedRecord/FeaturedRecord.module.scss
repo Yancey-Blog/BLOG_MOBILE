@@ -1,0 +1,38 @@
+.featured_records_item {
+  margin-bottom: rem(20);
+  box-shadow: 0 2px 4px 0 rgba($black, .05);
+
+  .cover {
+    width: calc(100vw - #{rem(48)});
+    height: calc(100vw - #{rem(48)});
+    object-fit: cover;
+  }
+
+  @at-root .featured_records_intro {
+    padding: rem(20);
+    background: $white;
+
+    .featured_records_release_time {
+      display: block;
+      font-size: 12px;
+      color: $red;
+    }
+
+    .featured_records_title {
+      padding: rem(16) 0;
+      font-size: 18px;
+      line-height: 1.6;
+
+      .featured_records_singer {
+        font-size: 12px;
+        color: $darkTxtColor;
+      }
+    }
+
+    .featured_records_buy_btn {
+      @include music_btn;
+    }
+
+  }
+
+}

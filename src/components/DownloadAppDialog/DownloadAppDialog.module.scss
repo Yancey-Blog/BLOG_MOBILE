@@ -1,0 +1,38 @@
+.download_app_dialog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to right, #bd3381, #ee583f);
+  opacity: 1;
+  padding: rem(7.5) rem(15);
+  transition: 300ms opacity linear;
+  will-change: transition;
+  color: #fff;
+
+  @at-root .download_app_dialog_txt {
+    .download_app_dialog_title {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: rem(15);
+      margin-bottom: rem(2);
+    }
+
+    .download_app_dialog_intro {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: rem(15);
+    }
+  }
+
+  .download_app_dialog_close {
+    @include close_icon
+  }
+}
+
+.fade_out {
+  @include fade_out
+}

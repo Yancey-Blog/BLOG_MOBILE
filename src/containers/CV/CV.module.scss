@@ -1,0 +1,86 @@
+.cv_wrapper {
+
+  font-size: 14px;
+  color: $white;
+  background-image: url(http://paul-themes.com/html/jonny/images/bg/bg3.jpg);
+  @include background_default;
+  line-height: 2;
+}
+
+.intro {
+  // padding-top: 50vh;
+  padding-top: 38vh;
+  padding-left: rem(20);
+  width: 100%;
+  height: calc(100vh - #{rem(70)});
+  background-image: url(https://yancey-assets.oss-cn-beijing.aliyuncs.com/IMG_0320.JPG);
+  @include background_default;
+
+  .intro_name {
+
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1;
+
+    span {
+      color: #f3ca2f;
+    }
+  }
+}
+
+.cv_container {
+  margin-bottom: rem(20);
+  background: rgba(0, 0, 0, 0.3);
+  padding: rem(20);
+}
+
+.cv_header {
+  position: relative;
+  background: rgba(243, 202, 47, 0.6);
+  padding: rem(12);
+  color: #000;
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.inner {
+  position: relative;
+  padding-left: rem(18);
+  border-left: 1px solid #525252;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: rem(12);
+    height: rem(12);
+    background: #0e0e0e;
+    top: 0;
+    left: rem(-6);
+    border-radius: 50%;
+    border: 2px solid #f3ca2f;
+  }
+}
+
+.cv_content {
+  padding: rem(18);
+
+  .company {
+    margin-bottom: rem(12);
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .period {
+    display: block;
+    margin: rem(12) 0 rem(20);
+    color: #f3ca2f;
+  }
+
+  .detail {
+    padding-bottom: rem(30);
+    line-height: 1.8;
+  }
+}

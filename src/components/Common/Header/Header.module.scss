@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  // @include border_1px(bottom, $lightBorderColor);
+  box-shadow: 0 2px 12px 0 rgba(79, 79, 79, .12);
+  z-index: 149;
+
+  .menu_trigger_container {
+    position: relative;
+    width: rem(60);
+    height: rem(60);
+    @include border_1px(right, $lightBorderColor);
+
+    .menu_trigger {
+      @include menu_trigger;
+    }
+  }
+}

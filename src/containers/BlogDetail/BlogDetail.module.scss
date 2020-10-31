@@ -1,0 +1,236 @@
+.blog_detail_wrapper {
+  padding: rem(20);
+  text-rendering: optimizeLegibility;
+  color: $lightTxtColor;
+  background: $white;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+
+  .meta {
+    display: flex;
+    margin-bottom: rem(20);
+    font-size: 14px;
+
+    .avatar {
+      width: rem(50);
+      height: rem(50);
+      background-image: url('//yancey-assets.oss-cn-beijing.aliyuncs.com/_Users_licaifan_Desktop_11532336786_.pic_hd.jpg');
+      @include background_default;
+      border-radius: 50%;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-left: 0.32rem;
+      margin-left: rem(20);
+
+      .user {
+        display: block;
+        color: rgba($black, 0.84);
+      }
+
+      .post_meta {
+        color: rgba($black, 0.54);
+      }
+    }
+  }
+
+  .author {
+    margin-top: rem(20);
+    padding-top: rem(20);
+    @include border_1px(top, $borderGray, 0);
+
+    .info {
+      max-width: rem(200);
+    }
+
+    .user {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .intro {
+      margin-top: rem(6);
+      line-height: 1.4;
+    }
+  }
+
+  .cover {
+    margin-bottom: rem(20);
+    width: 100%;
+    height: rem(184);
+    @include background_default;
+  }
+
+  h1 {
+    margin: rem(16) 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: rem(35) 0 rem(10);
+    font-weight: bold;
+  }
+
+  h2 {
+    padding-bottom: rem(12);
+    font-size: 22px;
+    @include border_1px(bottom, $borderGray, 0);
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  p {
+    margin: rem(22) 0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  p,
+  li {
+    code {
+      position: relative;
+      top: -1px;
+      margin: 0 rem(2);
+      padding: 0 rem(2);
+      color: #3d466d;
+      background-color: #f6f6f6;
+      border-radius: 1px;
+    }
+  }
+
+  code {
+    position: relative;
+    padding: rem(24) rem(12) rem(12);
+    font-size: 12px;
+    line-height: 1.7;
+    &::after {
+      position: absolute;
+      content: attr(data-language);
+      top: rem(4);
+      right: rem(8);
+    }
+  }
+
+  blockquote {
+    margin-bottom: rem(12);
+    padding: rem(12);
+    color: #666;
+    border-left: 4px solid #cbcbcb;
+    background-color: #f8f8f8;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  a {
+    color: #0269c8;
+    border-bottom: 1px solid #d1e9ff;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: rem(20) 0;
+    display: block;
+    overflow-x: auto;
+    border-spacing: 2px;
+    border-color: grey;
+    font-size: 14px;
+  }
+
+  tr {
+    border-top: 1px solid #dfe2e5;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+
+  tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+
+  th {
+    font-weight: bold;
+    text-align: -internal-center;
+  }
+
+  td,
+  th {
+    display: table-cell;
+    vertical-align: inherit;
+    border: 1px solid #dfe2e5;
+    padding: rem(6);
+  }
+
+  ul,
+  ol {
+    padding-left: rem(20);
+    font-size: 15px;
+    line-height: 1.8;
+    list-style-type: disc;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  .tags {
+    margin-top: 48px;
+    padding: 0;
+
+    .tag {
+      display: inline-block;
+      margin: 0 rem(8) rem(8) 0;
+      padding: rem(5) rem(10);
+      border-radius: 3px;
+      line-height: 1.4;
+      font-size: 15px;
+      background: rgba(0, 0, 0, 0.05);
+
+      a {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.68);
+        border: none;
+      }
+    }
+  }
+}
+
+.skeleton {
+  padding: rem(20);
+}
+
+:global(.img_alt) {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.68);
+}

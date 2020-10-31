@@ -1,0 +1,51 @@
+.yancey_music_item {
+  position: relative;
+  margin-bottom: rem(20);
+  box-shadow: 0 2px 4px 0 rgba($black, .05);
+  height: rem(236);
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    top: 2px;
+    left: 2px;
+    outline: 2px dashed $musicGray;
+  }
+
+  .cover {
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    top: 1px;
+    left: 1px;
+  }
+
+  @at-root .music_info {
+    position: absolute;
+    padding: rem(16) rem(20);
+    left: 1px;
+    bottom: 1px;
+    width: calc(100% - 2px);
+    background: $lightMenuBgColor;
+    overflow: hidden;
+
+    time {
+      display: block;
+      font-size: 12px;
+      color: $red;
+    }
+
+    .title {
+      padding: rem(12) 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .listen_link {
+      @include music_btn;
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.menu_wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 85vw;
+  height: 100vh;
+  color: $lightTxtColor;
+  // background-image: url($menuBg);
+  background-image: url($sayaka);
+  @include background_default;
+  z-index: 301;
+  transform: translateX(-85vw);
+  transition: all 0400ms linear;
+  pointer-events: auto;
+
+  @at-root .close_menu_wrapper {
+    @include flex_default;
+    padding: 0 rem(30);
+    height: rem(70);
+    font-size: 13px;
+
+    .selected_language {
+      @include border_1px(bottom, rgba($lightTxtColor, 0.5));
+    }
+
+    .close_btn {
+      @include close_icon;
+    }
+  }
+
+  .menu_container {
+    height: 100vh;
+    background: $lightMenuBgColor;
+  }
+
+  a {
+    color: $lightTxtColor;
+  }
+
+  .announcement_content {
+    margin-top: rem(12);
+    font-size: 16px;
+    font-weight: 300;
+    color: $switchGray;
+  }
+
+  .item_link {
+    display: block;
+    padding: rem(18) rem(36);
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: rem(0.5);
+  }
+
+  @at-root .theme_switch_wrapper {
+    @include flex_default;
+    padding: rem(18) rem(36);
+
+    .theme_switch_intro {
+      font-size: 16px;
+      font-weight: 400;
+      color: $switchGray;
+    }
+
+    .switch_container {
+      @include switch;
+    }
+  }
+}
