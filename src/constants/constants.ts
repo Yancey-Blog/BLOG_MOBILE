@@ -1,4 +1,4 @@
-export const aliOSS = '//yancey-assets.oss-cn-beijing.aliyuncs.com';
+export const aliOSS = '//static.yancey.app';
 export const webpSuffix = '?x-oss-process=image/format,webp';
 
 export const ipify = 'https://api.ipify.org/';
